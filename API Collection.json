@@ -36,6 +36,12 @@
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{mtoken}}"
+					}
+				},
 				"method": "POST",
 				"header": [
 					{
@@ -356,7 +362,7 @@
 				"auth": {
 					"type": "bearer",
 					"bearer": {
-						"token": "{{mtoken}}"
+						"token": "{{accesstoken}}"
 					}
 				},
 				"method": "POST",
@@ -372,14 +378,14 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"merchant_order_reference\": \"{{$guid}}\",\n    \"order_amount\": {\n        \"value\": 100,\n        \"currency\": \"INR\"\n    },\n    \"notes\": \"some order\",\n    \"purchase_details\": {\n        \"account_details\": {\n            \"bank_details\": {}\n        },\n        \"customer\": {\n            \"email_id\": \"joe.sam@gmail.com\",\n            \"first_name\": \"joe\",\n            \"last_name\": \"kumar\",\n            \"customer_id\": \"123\",\n            \"country_code\": \"91\",\n            \"mobile_number\": \"9891472395\",\n            \"is_edit_customer_details_allowed\": true,\n            \"billing_address\": {\n                \"address1\": \"H.No 15, Sector 17\",\n                \"address2\": \"\",\n                \"address3\": \"\",\n                \"pincode\": \"61232112\",\n                \"city\": \"CHANDIGARH\",\n                \"state\": \"PUNJAB\",\n                \"country\": \"INDIA\"\n            },\n            \"shipping_address\": {\n                \"address1\": \"H.No 15, Sector 17\",\n                \"address2\": \"string\",\n                \"address3\": \"string\",\n                \"pincode\": \"144001123\",\n                \"city\": \"CHANDIGARH\",\n                \"state\": \"PUNJAB\",\n                \"country\": \"INDIA\"\n            }\n        },\n        \"merchant_metadata\": {\n            \"key1\": \"value1\",\n            \"key2\": \"value2\"\n        }\n    }\n}",
+					"raw": "{\n    \"merchant_order_reference\": \"{{$guid}}\",\n    \"order_amount\": {\n        \"value\": 1000,\n        \"currency\": \"INR\"\n    },\n    \"notes\": \"some order\",\n    \"purchase_details\": {\n        \"account_details\": {\n            \"bank_details\": {}\n        },\n        \"customer\": {\n            \"email_id\": \"joe.sam@gmail.com\",\n            \"first_name\": \"joe\",\n            \"last_name\": \"kumar\",\n            \"customer_id\": \"123\",\n            \"country_code\": \"91\",\n            \"mobile_number\": \"9891472395\",\n            \"is_edit_customer_details_allowed\": true,\n            \"billing_address\": {\n                \"address1\": \"H.No 15, Sector 17\",\n                \"address2\": \"\",\n                \"address3\": \"\",\n                \"pincode\": \"61232112\",\n                \"city\": \"CHANDIGARH\",\n                \"state\": \"PUNJAB\",\n                \"country\": \"INDIA\"\n            },\n            \"shipping_address\": {\n                \"address1\": \"H.No 15, Sector 17\",\n                \"address2\": \"string\",\n                \"address3\": \"string\",\n                \"pincode\": \"144001123\",\n                \"city\": \"CHANDIGARH\",\n                \"state\": \"PUNJAB\",\n                \"country\": \"INDIA\"\n            }\n        },\n        \"merchant_metadata\": {\n            \"key1\": \"value1\",\n            \"key2\": \"value2\"\n        }\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "https://api.pluralpay.in/api/checkout/v1/orders"
+				"url": "https://pluraluat.v2.pinepg.in/api/checkout/v1/orders"
 			},
 			"response": []
 		},
